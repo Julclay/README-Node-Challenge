@@ -1,9 +1,8 @@
 import inquirer from 'inquirer';
 import fs from "fs/promises";
-import { writeFile } from 'fs';
 
 
-let {title, description, installation, usage, license } = await inquirer
+let {title, description, installation, usage, license, credits, test, gitHub, email} = await inquirer
 
 .prompt([
     {
@@ -37,6 +36,30 @@ let {title, description, installation, usage, license } = await inquirer
 
     },
 
+    {
+        type: 'input',
+        name: 'credits',
+        message: "Write all the contributors to your project",
+    },
+
+    {
+        type: 'input',
+        name: 'test',
+        message: "How can it be used?",
+    },
+
+    {
+        type: 'input',
+        name: 'gitHub',
+        message: "What is your gitHub profile?",
+    },
+
+    {
+        type: 'input',
+        name: 'email',
+        message: "What is your email?",
+    },
+
 
 ])
 
@@ -58,33 +81,34 @@ let readMeFile = `# ${title}
 ## Description
 ${description}
 
+## Table of Contents
+${installation && '### [Installation](#installation)'}
+${usage && '### [Usage](#usage)'}
+### [License](#license)
+${credits && '### [Credits](#credits)'}
+${test && '### [Tests](#tests)'}
+### [Questions](#questions)
 
-
-## Installation
+${installation && '## Installation'}
 ${installation}
 
-## Usage
+${usage && '## Usage'}
 ${usage}
 
 ## License
 ${getLicense(license)}
 
+${credits && '## Credits'}
+${credits}
 
+${test && '## Tests'}
+${test}
 
+## Questions?
+If you have any questions or want more informaiton 
+you can visit [my Github account](https://github.com/${gitHub})
+
+Or write me an email (${email})
 `
 
 fs.writeFile('README.md', readMeFile)
-
-
-// ## Table of Contents
-// ${table}
-
-// ## Contribution
-// ${contribution}
-
-// ## Tests
-// ${tests}
-
-// ## Questions?
-// ${gitEmail}
-// ${email}

@@ -45,7 +45,7 @@ let {title, description, installation, usage, license, credits, test, gitHub, em
     {
         type: 'input',
         name: 'test',
-        message: "How can it be used?",
+        message: "Write about the tests:",
     },
 
     {

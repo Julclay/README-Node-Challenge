@@ -1,7 +1,7 @@
-# Hello World
+# README generator with terminal using node
 
 ## Description
-It is a great project
+The user will use the terminal to be guided to create the README file for the project. Each question will be related to a different topic in the README. Once all the questions answered a README file will be automatically generated with the user's answers.
 
 ## Table of Contents
 ### [Installation](#installation)
@@ -12,22 +12,22 @@ It is a great project
 ### [Questions](#questions)
 
 ## Installation
-nothing
+Node needs to be installed in the folder and import inquirer
 
 ## Usage
-for everyghtin
+You can use this project to generate automatically your README file for your project. You will be guided by the questions. If you do not want to have one of the topic in your README, just press enter (in the terminal) leaving it blank. The app will automatically remove the topic you chose not to answer.
 
 ## License
-[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic_2.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Credits
-many peopole
+For this project I used node.js https://nodejs.org/en/
 
 ## Tests
-no test done
+No tests for this app
 
 ## Questions?
 If you have any questions or want more informaiton 
-you can visit [my Github account](https://github.com/julclay)
+you can visit [my Github account](https://github.com/Julclay)
 
-Or write me an email (julc.lay@hotmail.com)
+Or write me an email (jul.clay@hotmail.com)

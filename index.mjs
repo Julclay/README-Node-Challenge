@@ -8,7 +8,7 @@ let {title, description, installation, usage, license, credits, test, gitHub, em
     {
         type: 'input',
         name: 'title',
-        message: "What is your porject Title?",
+        message: "What is your project Title?",
     },
 
     {
